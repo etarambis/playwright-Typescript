@@ -36,7 +36,6 @@ test('loginRedBanco', async ({ }) => {
     await page.getByText('Selecciona 1 o más estados').click();
     await expect(page.getByRole('option', { name: 'Pendiente' })).toBeVisible();
 
-    await page.getByLabel('Rechazada').getByText('Rechazada').click();
     await page.getByText('Rechazada arrow_drop_down').click();
     await page.getByText('Selecciona rango o fecha').click();
     await expect(page.getByRole('heading', { name: 'Fecha de operación' })).toBeVisible();
